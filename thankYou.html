@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Thank You - Faithful Touch Foundation</title>
+		<style>
+			/* CSS Reset & Setup */
+			*,
+			*::before,
+			*::after {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			:root {
+				--color-bg: #f7faf9;
+				--color-surface: #ffffff;
+				--color-primary: #1e533c; /* Kenyan Forest Green */
+				--color-primary-light: #eaf2ee;
+				--color-accent: #d97706; /* Warm Terracotta Accent */
+				--color-text-main: #2d3748;
+				--color-text-muted: #5a6a85;
+				--font-family:
+					-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+					Helvetica, Arial, sans-serif;
+			}
+
+			body {
+				font-family: var(--font-family);
+				background-color: var(--color-bg);
+				color: var(--color-text-main);
+				line-height: 1.5;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				min-height: 100vh;
+				padding: 20px;
+			}
+
+			/* Card Container Layout */
+			.thank-you-card {
+				background-color: var(--color-surface);
+				max-width: 520px;
+				width: 100%;
+				border-radius: 24px;
+				padding: 40px 32px;
+				box-shadow:
+					0 10px 25px -5px rgba(30, 83, 60, 0.05),
+					0 8px 10px -6px rgba(30, 83, 60, 0.05);
+				border: 1px solid rgba(30, 83, 60, 0.08);
+				text-align: center;
+				position: relative;
+			}
+
+			/* Kenyan flag color gradient top ribbon */
+			.thank-you-card::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 6px;
+				background: linear-gradient(
+					90deg,
+					var(--color-primary) 0%,
+					var(--color-accent) 100%
+				);
+				border-top-left-radius: 24px;
+				border-top-right-radius: 24px;
+			}
+
+			/* Icon Container styling */
+			.icon-container {
+				width: 72px;
+				height: 72px;
+				background-color: var(--color-primary-light);
+				border-radius: 50%;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				margin-bottom: 24px;
+			}
+
+			.icon-container svg {
+				width: 36px;
+				height: 36px;
+				color: var(--color-primary);
+			}
+
+			/* Typography */
+			h1 {
+				font-size: 28px;
+				font-weight: 800;
+				color: var(--color-primary);
+				margin-bottom: 12px;
+				letter-spacing: -0.5px;
+			}
+
+			p {
+				font-size: 15px;
+				color: var(--color-text-muted);
+				margin-bottom: 28px;
+				line-height: 1.6;
+			}
+
+			/* Action Buttons */
+			.actions {
+				display: flex;
+				flex-direction: column;
+				gap: 12px;
+			}
+
+			.btn {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				padding: 14px 24px;
+				font-size: 15px;
+				font-weight: 600;
+				border-radius: 12px;
+				text-decoration: none;
+				transition: all 0.2s ease-in-out;
+				cursor: pointer;
+			}
+
+			.btn-primary {
+				background-color: var(--color-primary);
+				color: #ffffff;
+				border: none;
+				box-shadow: 0 4px 12px rgba(30, 83, 60, 0.15);
+			}
+
+			.btn-primary:hover {
+				background-color: #153b2b;
+				transform: translateY(-1px);
+			}
+
+			.btn-secondary {
+				background-color: transparent;
+				color: var(--color-primary);
+				border: 1px solid rgba(30, 83, 60, 0.2);
+			}
+
+			.btn-secondary:hover {
+				background-color: var(--color-primary-light);
+				border-color: var(--color-primary);
+			}
+
+			.footer-text {
+				margin-top: 32px;
+				font-size: 11px;
+				color: #a0aec0;
+				letter-spacing: 0.5px;
+				text-transform: uppercase;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="thank-you-card">
+			<div class="icon-container">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke-width="2"
+					stroke="currentColor"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+					/>
+				</svg>
+			</div>
+
+			<h1>Asante Sana!</h1>
+			<p>
+				Your support directly powers community-led efforts across Kenya.
+				Together, we are protecting children, restoring young people,
+				and strengthening the local families holding our neighborhoods
+				together.
+			</p>
+
+			<div class="actions">
+				<a href="/" class="btn btn-primary">Return to Homepage</a>
+			</div>
+
+			<div class="footer-text">Faithful Touch Foundation</div>
+		</div>
+	</body>
+</html>
